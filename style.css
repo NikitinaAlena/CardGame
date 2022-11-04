@@ -37,6 +37,7 @@ body {
     color: #004980;
     margin-bottom: 48px;
     margin-top: 52px;
+   
 }
 
 .difficulty-selection-levels{
@@ -47,7 +48,7 @@ body {
     margin-bottom: 67px;
 }
 
-.level{
+.button-level{
     width: 98px;
     height: 98px;
     background: #FFFFFF;
@@ -57,6 +58,17 @@ body {
     font-weight: 400;
     font-size: 64px;
     color: #0080C1;
+}
+
+.button-level:hover{
+    cursor:pointer;
+    outline: 4px solid #004980;
+    border-radius: 12px;
+    transition: outline 0.2s;
+}
+
+.button-level:focus {
+    outline: 4px solid #004980;
 }
 
 .difficulty-selection-start{
@@ -74,4 +86,53 @@ font-weight: 400;
 font-size: 24px;
 color: #FFFFFF;
 border: 0;
+transition: background 0.5s;
+transition: all 0.4s;
+}
+
+.play:hover {
+    transform: scale(1.05);
+    background: #0080C1;
+    cursor: pointer;
+    box-shadow: 
+    0px 0px 0px 3px #FFFFFF,
+    0px 0px 5px 6px #004980; 
+}
+
+.info-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    transition: all 0.5s;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #C2F5FF;
+    border-radius: 12px;
+    width: 480px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.info-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.hidden {
+    display: none;
 }
