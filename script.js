@@ -1,22 +1,38 @@
+window.gameData = {
+    gameLevel: {},
+}
+
 const difficultySelection = document.querySelector('.difficulty-selection');
 const difficultySelectionLevels = document.querySelector('.difficulty-selection-levels');
-const buttonLevels = document.querySelectorAll('.button-level');
+const difficultySelectionLevelsItems = document.querySelectorAll('.difficulty-selection-levels-item');
+const levelItems = document.querySelectorAll('.item-level');
 const difficultySelectionStart = document.querySelector('.difficulty-selection-start');
 const play = document.querySelector('.play');
 const game = document.querySelector('.game');
 
 let level;
-buttonLevels.forEach(elem => {
-    elem.addEventListener('click', function (e) {
-        e.preventDefault();
-        level = this.dataset.id;
-        localStorage.setItem('level', level);
-    });
-});
-
 play.addEventListener('click', () => {
-    if (!localStorage.level) {
-        difficultySelection.classList.add('hidden');
+    levelItems.forEach(elem => {
+        if (elem.checked) {
+            level = elem.value;
+            window.gameData.gameLevel['level'] = level;
+        }
+    });
+
+    difficultySelection.classList.add('hidden');
+    if (level === '1') {
+        game.textContent = 'выбран 1 уровень';
+        game.classList.remove('hidden')
+    }
+    else if (level === '2') {
+        game.textContent = 'выбран 2 уровень';
+        game.classList.remove('hidden')
+    }
+    else if (level === '3') {
+        game.textContent = 'выбран 3 уровень';
+        game.classList.remove('hidden')
+    }
+    else {
         const infoBg = document.createElement('div');
         infoBg.classList.add('info-bg');
         const info = document.createElement('div');
@@ -35,20 +51,6 @@ play.addEventListener('click', () => {
             infoBg.classList.add('hidden');
             difficultySelection.classList.remove('hidden');
         });
-
-    }
-    else {
-        difficultySelection.classList.add('hidden');
-        game.classList.remove('hidden');
-        if (level === '1') {
-            game.textContent = 'выбран 1 уровень';
-        }
-        else if (level === '2') {
-            game.textContent = 'выбран 2 уровень';
-        }
-        else if (level === '3') {
-            game.textContent = 'выбран 3 уровень';
-        }
     }
 });
 
