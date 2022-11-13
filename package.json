@@ -1,0 +1,41 @@
+{
+  "name": "cardgame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -p 3001",
+    "format": "prettier --write ./scripts/",
+    "lint:js": "eslint ./scripts/**/*.js",
+    "lint:style": "stylelint ./style/**/*.{css,scss}",
+    "lint": "npm run lint:js && npm run lint:style",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitinaAlena/CardGame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitinaAlena/CardGame/issues"
+  },
+  "homepage": "https://github.com/NikitinaAlena/CardGame#readme",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.14.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-prettier": "^2.0.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
