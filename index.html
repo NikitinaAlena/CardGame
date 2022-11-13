@@ -1,42 +1,115 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Карточная игра</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
 
-</head>
-
-<body>
-    <div class="difficulty-selection">
-        <div class="difficulty-selection-title">
-            <h1 class="title">Выбери <br> <span>сложность</span></h1>
+  <body>
+    <div class="difficulty-selection-screen">
+      <div class="difficulty-selection-title">
+        <h1 class="title">
+          Выбери <br />
+          <span>сложность</span>
+        </h1>
+      </div>
+      <div class="difficulty-selection-levels">
+        <div class="difficulty-selection-levels-item">
+          <input
+            id="radio-1"
+            type="radio"
+            name="radio"
+            value="1"
+            class="item-level"
+          />
+          <label for="radio-1">1</label>
         </div>
-        <div class="difficulty-selection-levels">
-            <div class="difficulty-selection-levels-item">
-                <input id="radio-1" type="radio" name="radio" value="1" class="item-level">
-                <label for="radio-1">1</label>
-            </div>
-            <div class="difficulty-selection-levels-item">
-                <input id="radio-2" type="radio" name="radio" value="2" class="item-level">
-                <label for="radio-2">2</label>
-            </div>
-            <div class="difficulty-selection-levels-item">
-                <input id="radio-3" type="radio" name="radio" value="3" class="item-level">
-                <label for="radio-3">3</label>
-            </div>
+        <div class="difficulty-selection-levels-item">
+          <input
+            id="radio-2"
+            type="radio"
+            name="radio"
+            value="2"
+            class="item-level"
+          />
+          <label for="radio-2">2</label>
         </div>
-        <div class="difficulty-selection-start">
-            <button class="play">Старт</button>
+        <div class="difficulty-selection-levels-item">
+          <input
+            id="radio-3"
+            type="radio"
+            name="radio"
+            value="3"
+            class="item-level"
+          />
+          <label for="radio-3">3</label>
         </div>
+      </div>
+      <div class="difficulty-selection-start">
+        <button class="play style-button">Старт</button>
+      </div>
     </div>
 
-    <div class="game hidden"></div>
+    <div class="game-screen hidden">
+      <div class="game-header">
+        <div class="game-timer">
+          <div class="game-timer-section">
+            <div class="game-timer-title">min</div>
+            <div class="game-timer-value">00</div>
+          </div>
+          <div class="game-timer-sep">.</div>
+          <div class="game-timer-section">
+            <div class="game-timer-title">sek</div>
+            <div class="game-timer-value">00</div>
+          </div>
+        </div>
+        <div class="game-begin-button">
+          <button class="style-button">Начать заново</button>
+        </div>
+      </div>
+      <div class="game-field item">
+        <div class="game-field-card item-1"></div>
+        <div class="game-field-card item-2"></div>
+        <div class="game-field-card item-3"></div>
+        <div class="game-field-card item-4"></div>
+        <div class="game-field-card item-5"></div>
+        <div class="game-field-card item-6"></div>
+        <div class="game-field-card item-7"></div>
+        <div class="game-field-card item-8"></div>
+        <div class="game-field-card item-9"></div>
+        <div class="game-field-card item-10"></div>
+        <div class="game-field-card item-11"></div>
+        <div class="game-field-card item-12"></div>
+        <div class="game-field-card item-13"></div>
+        <div class="game-field-card item-14"></div>
+        <div class="game-field-card item-15"></div>
+        <div class="game-field-card item-16"></div>
+        <div class="game-field-card item-17"></div>
+        <div class="game-field-card item-18"></div>
+        <div class="game-field-card item-19"></div>
+        <div class="game-field-card item-20"></div>
+        <div class="game-field-card item-21"></div>
+        <div class="game-field-card item-22"></div>
+        <div class="game-field-card item-23"></div>
+        <div class="game-field-card item-24"></div>
+        <div class="game-field-card item-25"></div>
+        <div class="game-field-card item-26"></div>
+        <div class="game-field-card item-27"></div>
+        <div class="game-field-card item-28"></div>
+        <div class="game-field-card item-29"></div>
+        <div class="game-field-card item-30"></div>
+        <div class="game-field-card item-31"></div>
+        <div class="game-field-card item-32"></div>
+        <div class="game-field-card item-33"></div>
+        <div class="game-field-card item-34"></div>
+        <div class="game-field-card item-35"></div>
+        <div class="game-field-card item-36"></div>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
-</body>
-
+    <script src="scripts/script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: StratosSkyeng;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/stratosskyengweb-regular.woff") format("woff");
+}
+
+body {
+  font-family: StratosSkyeng, sans-serif;
+  background-color: #004980;
+}
+
+.difficulty-selection-screen {
+  display: flex;
+  flex-direction: column;
+  background-color: #c2f5ff;
+  border-radius: 12px;
+  width: 480px;
+  height: 459px;
+  margin-left: calc(50% - 240px);
+  margin-right: calc(50% - 240px);
+  margin-top: 157px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  color: #004980;
+  margin-bottom: 48px;
+  margin-top: 52px;
+}
+
+.difficulty-selection-levels {
+  display: flex;
+  justify-content: center;
+  column-gap: 26px;
+  margin-bottom: 67px;
+
+  & input[type="radio"] {
+    display: none;
+  }
+
+  & label {
+    cursor: pointer;
+    width: 98px;
+    height: 98px;
+    background: #fff;
+    border-radius: 12px;
+    border: 0;
+    font-weight: 400;
+    font-size: 64px;
+    color: #0080c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-item:hover {
+    cursor: pointer;
+    outline: 4px solid #004980;
+    border-radius: 12px;
+    transition: outline 0.2s;
+  }
+
+  & input[type="radio"]:checked + label {
+    outline: 4px solid #004980;
+    border-radius: 12px;
+  }
+}
+
+.difficulty-selection-start {
+  display: flex;
+  justify-content: center;
+}
+
+.style-button {
+  width: 246px;
+  height: 50px;
+  background: #7ac100;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  border: 0;
+  transition: background 0.5s;
+  transition: all 0.4s;
+}
+
+.play:hover {
+  transform: scale(1.05);
+  background: #0080c1;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px #fff, 0 0 5px 6px #004980;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #c2f5ff;
+  border-radius: 12px;
+  width: 480px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+
+  &-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0 0 0 / 30%);
+  }
+
+  &-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+}
+
+.game-screen {
+  margin-left: calc(50% - 490px);
+  margin-right: calc(50% - 490px);
+  padding-top: 22px;
+  padding-bottom: 49px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.game-timer {
+  display: flex;
+  color: #fff;
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &-title {
+    font-size: 16px;
+  }
+
+  &-value {
+    font-size: 64px;
+  }
+
+  &-sep {
+    font-size: 64px;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.game-begin-button {
+  padding-top: 35px;
+}
+
+.game-field {
+  display: flex;
+  flex-direction: row;
+  /* stylelint-disable-next-line */
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &-card {
+    width: 95px;
+    height: 133px;
+  }
+}
+
+.item {
+  &-1 {
+    background: url("/img/cards/тузПики.png");
+  }
+
+  &-2 {
+    background: url("/img/cards/король\ пики.png");
+  }
+
+  &-3 {
+    background: url("/img/cards/дама\ пики.png");
+  }
+
+  &-4 {
+    background: url("/img/cards/валет\ пики.png");
+  }
+
+  &-5 {
+    background: url("/img/cards/10\ пики.png");
+  }
+
+  &-6 {
+    background: url("/img/cards/9\ пики.png");
+  }
+
+  &-7 {
+    background: url("/img/cards/8\ пики.png");
+  }
+
+  &-8 {
+    background: url("/img/cards/7\ пики.png");
+  }
+
+  &-9 {
+    background: url("/img/cards/6\ пики.png");
+  }
+
+  &-10 {
+    background: url("/img/cards/туз\ черви.png");
+  }
+
+  &-11 {
+    background: url("/img/cards/король\ черви.png");
+  }
+
+  &-12 {
+    background: url("/img/cards/дама\ черви.png");
+  }
+
+  &-13 {
+    background: url("/img/cards/валет\ черви.png");
+  }
+
+  &-14 {
+    background: url("/img/cards/10\ черви.png");
+  }
+
+  &-15 {
+    background: url("/img/cards/9\ черви.png");
+  }
+
+  &-16 {
+    background: url("/img/cards/8\ черви.png");
+  }
+
+  &-17 {
+    background: url("/img/cards/7\ черви.png");
+  }
+
+  &-18 {
+    background: url("/img/cards/6\ черви.png");
+  }
+
+  &-19 {
+    background: url("/img/cards/туз\ бубны.png");
+  }
+
+  &-20 {
+    background: url("/img/cards/король\ бубны.png");
+  }
+
+  &-21 {
+    background: url("/img/cards/дама\ бубны.png");
+  }
+
+  &-22 {
+    background: url("/img/cards/валет\ бубны.png");
+  }
+
+  &-23 {
+    background: url("/img/cards/10\ бубны.png");
+  }
+
+  &-24 {
+    background: url("/img/cards/9\ бубны.png");
+  }
+
+  &-25 {
+    background: url("/img/cards/8\ бубны.png");
+  }
+
+  &-26 {
+    background: url("/img/cards/7\ бубны.png");
+  }
+
+  &-27 {
+    background: url("/img/cards/6\ бубны.png");
+  }
+
+  &-28 {
+    background: url("/img/cards/туз\ крести.png");
+  }
+
+  &-29 {
+    background: url("/img/cards/король\ крести.png");
+  }
+
+  &-30 {
+    background: url("/img/cards/дама\ крести.png");
+  }
+
+  &-31 {
+    background: url("/img/cards/валет\ крести.png");
+  }
+
+  &-32 {
+    background: url("/img/cards/10\ крести.png");
+  }
+
+  &-33 {
+    background: url("/img/cards/9\ крести.png");
+  }
+
+  &-34 {
+    background: url("/img/cards/8\ крести.png");
+  }
+
+  &-35 {
+    background: url("/img/cards/7\ крести.png");
+  }
+
+  &-36 {
+    background: url("/img/cards/6\ крести.png");
+  }
+}
+
+.card-closed {
+  background: url("/img/рубашка.png");
+}
+
+.hidden {
+  display: none;
+}
